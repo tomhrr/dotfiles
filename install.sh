@@ -15,6 +15,8 @@ then
 fi
 
 mkdir -p ~/.mutt
+touch ~/.mutt/empty
+chmod 755 ~/.mutt/empty
 mkdir -p $olddir
 cd $dir
 

@@ -51,4 +51,4 @@ macro pager \cb "\
 : unset my_tmp_pipe_decode\n" \
 'call urlview to extract URLs out of a message'
 
-source ~/.mutt/*
+source `ls ~/.mutt/*`
