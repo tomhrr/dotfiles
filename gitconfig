@@ -1,0 +1,7 @@
+[user]
+	name = Tom Harrison
+	email = tomh5908@gmail.com
+[core]
+	deltaBaseCacheLimit = 1G
+[push]
+	default = matching
