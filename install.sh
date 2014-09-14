@@ -5,16 +5,20 @@
 ############################
 
 dir=~/dotfiles
-if [ -n "$1" ]; then
-    dir=~/dotfiles/profiles/$1
-fi
+files="vimrc vim tmux.conf bash_profile bashrc gitconfig mcabberrc mutt muttrc Xresources"
 olddir=~/dotfiles-old
-files="vimrc vim tmux.conf"
+if [ -n "$1" ]
+then
+    dir=~/dotfiles/profiles/$1
+    files=~/dotfiles/profiles/$1/*
+    olddir=~/dotfiles-old/profiles/$1
+fi
 
 mkdir -p $olddir
 cd $dir
 
 for file in $files; do
-    mv ~/.$file ~/dotfiles_old/
+    file=`basename $file`
+    mv ~/.$file $olddir/
     ln -s $dir/$file ~/.$file
 done

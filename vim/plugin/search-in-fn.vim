@@ -25,5 +25,3 @@ function! ScopeSearch(navigator)
 endfunction
 
 """ end search_keywords_in_c_function
-
-echo "Asdf"
