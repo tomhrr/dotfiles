@@ -1,4 +1,3 @@
-XTerm*font: -*-terminus-medium-r-*-*-24-*-*-*-*-*-iso10646-*
 XTerm*wideFont: -*-fixed-medium-r-*-*-*-*-*-*-*-*-iso10646-*
 XTerm*background: white
 XTerm*foreground: black
@@ -15,7 +14,6 @@ XTerm*multiClickTime: 250
 XTerm*antialias: true
 XTerm*utf8: 2
 
-URxvt*font: xft:Terminus:pixelsize=24;xft:Droid Sans Fallback
 URxvt*boldFont: 
 URxvt*italicFont: 
 URxvt*scrollBar: false
@@ -36,3 +34,5 @@ URxvt.keysym.Control-Left: \033[1;5D
 URxvt.keysym.Control-Right: \033[1;5C
 urxvt.pointerBlank: true
 urxvt.pointerBlankDelay: 987654321
+
+#include ".Xresources2"
