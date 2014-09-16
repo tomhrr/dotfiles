@@ -22,6 +22,8 @@ cd $dir
 
 for file in $files; do
     file=`basename $file`
-    mv ~/.$file $olddir/
+    if [ -e $file ]; then
+        mv ~/.$file $olddir/
+    fi
     ln -s $dir/$file ~/.$file
 done

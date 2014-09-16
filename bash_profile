@@ -27,6 +27,15 @@ export JAVA_ARGS="-Xms1500M -Xmx1500M"
 export PATH=$PATH:/usr/local/maven/bin
 export TZ='Australia/Brisbane'
 
+if [ "$TERM" == "screen-256color" ]; then
+    if hash infocmp 2>/dev/null; then
+        infocmp screen-256color >/dev/null 2>&1
+        if [ $? != 0 ]; then
+            TERM=screen
+        fi
+    fi
+fi
+
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
