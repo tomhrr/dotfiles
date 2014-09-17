@@ -24,7 +24,7 @@ export LANG=en_AU.utf8
 export BROWSER=chromium
 export KARAF_HOME_DEV=~/work/karaf
 export JAVA_ARGS="-Xms1500M -Xmx1500M"
-export PATH=$PATH:/usr/local/maven/bin
+export PATH=$PATH:/usr/local/maven/bin:/usr/local/sbin:/usr/sbin:/sbin
 export TZ='Australia/Brisbane'
 
 if [ "$TERM" == "screen-256color" ]; then
