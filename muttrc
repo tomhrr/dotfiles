@@ -27,6 +27,7 @@ color bold       brightwhite  black
 color markers    red          brightwhite
 
 macro index .n "l~N\n"
+macro index .o "l~O\n"
 macro index .a "lall\n"
 macro index .t ":set sort=threads\n"
 macro index .d ":set sort=date\n"
