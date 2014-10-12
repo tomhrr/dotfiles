@@ -6,12 +6,13 @@ color info white black
 color background white white
 color article black white
 auto-reload yes
+bind-key LEFT prev article
 bind-key LEFT pageup feedlist
 bind-key LEFT pageup articlelist
-bind-key LEFT previous article
+bind-key RIGHT next article
 bind-key RIGHT pagedown feedlist
 bind-key RIGHT pagedown articlelist
-bind-key RIGHT next article
 bind-key ^B show-urls
 browser chromium
 article-sort-order date desc
+external-url-viewer "urlview"

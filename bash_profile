@@ -26,6 +26,7 @@ export KARAF_HOME_DEV=~/work/karaf
 export JAVA_ARGS="-Xms1500M -Xmx1500M"
 export PATH=$PATH:/usr/local/maven/bin:/usr/local/sbin:/usr/sbin:/sbin
 export TZ='Australia/Brisbane'
+export BATCH=YES
 
 if [ "$TERM" == "screen-256color" ]; then
     if hash infocmp 2>/dev/null; then
