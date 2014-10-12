@@ -12,7 +12,6 @@ function start_agent {
 if [ -f "${SSH_ENV}" ]; then
     . "${SSH_ENV}" > /dev/null
     ps aux | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-        echo "cannot find agent"
         start_agent;
     }
 else
