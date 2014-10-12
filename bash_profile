@@ -20,7 +20,7 @@ fi
 
 export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:bin/javac::")
 export JDK_HOME=$JAVA_HOME
-export LANG=en_AU.utf8
+export LANG=en_AU.UTF-8
 export BROWSER=chromium
 export KARAF_HOME_DEV=~/work/karaf
 export JAVA_ARGS="-Xms1500M -Xmx1500M"

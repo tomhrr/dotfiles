@@ -1,0 +1,12 @@
+color listnormal black white
+color listfocus black cyan
+color listnormal_unread black white
+color listfocus_unread black cyan
+color info white black
+color background white white
+color article black white
+auto-reload yes
+bind-key LEFT pageup
+bind-key RIGHT pagedown
+bind-key ^B show-urls
+browser chromium
