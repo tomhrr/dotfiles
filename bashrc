@@ -33,20 +33,18 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-HOSTSHORT=`hostname | sed -e 's/\(.*\)\..*\..*/\1/'`
+HOSTSHORT=`hostname | sed -e 's/\(.*\)\..*\..*/\1/' | sed -e 's/\.local//'`
 PS1='${debian_chroot:+($debian_chroot)}\u@$HOSTSHORT:\W\$ '
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \W\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
+# Enable color support of ls and also add handy aliases. (Parts taken
+# from www.pixelbeat.org/scripts/l.)
+{ ls --color -d . >/dev/null 2>&1; } ||
+{ gls --color -d . >/dev/null 2>&1 && ls=gls; } || NONGNU=1
 
-# Enable color support of ls and also add handy aliases.
-if [ -x /usr/bin/dircolors ]; then
+if [ "$NONGNU" ]; then
+    alias ls='ls -G'
+    alias grep='grep --color=auto'
+elif [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     alias grep='grep --color=auto'
