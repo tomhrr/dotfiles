@@ -6,6 +6,7 @@ color info color255 black
 color background color256 color256
 color article black color256
 auto-reload yes
+bind-key d delete-article
 bind-key LEFT prev article
 bind-key LEFT pageup feedlist
 bind-key LEFT pageup articlelist
