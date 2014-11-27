@@ -2,6 +2,9 @@ set nocompatible
 
 map ;; i#!/usr/bin/perluse warnings;use strict;
 map <C-T> :NERDTreeToggle<CR>
+map <C-k> :lprevious<CR>
+map <C-l> :lnext<CR>
+:command S SyntasticCheck
 
 set history=1000
 set wildmode=list:longest
@@ -32,6 +35,11 @@ autocmd BufRead *.html set tw=0
 autocmd BufRead *.dt   set syntax=dale
 
 let g:ctrlp_custom_ignore = '\.o'
+
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
+let g:syntastic_enable_perl_checker = 1
+let g:syntastic_perl_checkers = ['perl', 'podchecker']
+let g:syntastic_always_populate_loc_list = 1
 
 execute pathogen#infect()
 filetype plugin indent on
