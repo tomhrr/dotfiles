@@ -1,6 +1,7 @@
 set nocompatible
 
-noremap ll i#!/usr/bin/perluse warnings;use strict;
+map ;; i#!/usr/bin/perluse warnings;use strict;
+map <C-T> :NERDTreeToggle<CR>
 
 set history=1000
 set wildmode=list:longest
@@ -31,3 +32,6 @@ autocmd BufRead *.html set tw=0
 autocmd BufRead *.dt   set syntax=dale
 
 let g:ctrlp_custom_ignore = '\.o'
+
+execute pathogen#infect()
+filetype plugin indent on
