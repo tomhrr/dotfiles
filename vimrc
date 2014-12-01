@@ -4,6 +4,7 @@ map ;; i#!/usr/bin/perluse warnings;use strict;
 map <C-T> :NERDTreeToggle<CR>
 map <C-k> :lprevious<CR>
 map <C-l> :lnext<CR>
+map <leader>gf :e <cfile><cr>
 :command S SyntasticCheck
 
 set history=1000
@@ -42,4 +43,3 @@ let g:syntastic_perl_checkers = ['perl', 'podchecker']
 let g:syntastic_always_populate_loc_list = 1
 
 execute pathogen#infect()
-filetype plugin indent on
