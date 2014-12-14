@@ -4,6 +4,7 @@ map ;; i#!/usr/bin/perluse warnings;use strict;
 map <C-T> :NERDTreeToggle<CR>
 map <C-k> :lprevious<CR>
 map <C-l> :lnext<CR>
+map <leader>gf :e <cfile><cr>
 :command S SyntasticCheck
 
 set history=1000
