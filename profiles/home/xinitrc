@@ -1,0 +1,7 @@
+#!/bin/sh
+xmodmap $HOME/.Xmodmap
+xset r rate 250 50
+xset b off
+xrdb -load $HOME/.Xresources
+urxvtd &
+exec xmonad
