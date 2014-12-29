@@ -1,5 +1,0 @@
-xmodmap $HOME/.Xmodmap
-xset r rate 250 50
-xrdb -load $HOME/.Xresources
-urxvtd &
-exec xmonad

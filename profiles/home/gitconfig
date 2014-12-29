@@ -5,3 +5,5 @@
 	deltaBaseCacheLimit = 1G
 [push]
 	default = matching
+[init]
+	templatedir = ~/.git

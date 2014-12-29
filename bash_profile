@@ -11,7 +11,7 @@ function start_agent {
 
 if [ -f "${SSH_ENV}" ]; then
     . "${SSH_ENV}" > /dev/null
-    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+    ps wwaux | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
         start_agent;
     }
 else
@@ -20,12 +20,13 @@ fi
 
 export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:bin/javac::")
 export JDK_HOME=$JAVA_HOME
-export LANG=en_AU.utf8
+export LANG=en_AU.UTF-8
 export BROWSER=chromium
 export KARAF_HOME_DEV=~/work/karaf
 export JAVA_ARGS="-Xms1500M -Xmx1500M"
 export PATH=$PATH:/usr/local/maven/bin:/usr/local/sbin:/usr/sbin:/sbin
 export TZ='Australia/Brisbane'
+export BATCH=YES
 
 if [ "$TERM" == "screen-256color" ]; then
     if hash infocmp 2>/dev/null; then
