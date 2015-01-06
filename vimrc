@@ -34,6 +34,7 @@ autocmd BufRead *.t    set syntax=perl
 autocmd BufRead *.spec set tw=0
 autocmd BufRead *.html set tw=0
 autocmd BufRead *.dt   set syntax=dale
+autocmd BufRead /tmp/mutt-* :silent! %s/^\([>|]\s\?\)\+/\=substitute(submatch(0), '\s', '', 'g').' '
 
 let g:ctrlp_custom_ignore = '\.o'
 

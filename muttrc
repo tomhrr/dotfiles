@@ -8,6 +8,8 @@ set sleep_time=0
 set status_format="[%v on %h] %n new; %b with new"
 set wait_key=no
 set mailcap_path="$HOME/.mailcap:/etc/mailcap:/usr/lib/mime/mailcap"
+set timeout=30
+set mail_check=5
 bind index N search-opposite
 bind pager N search-opposite
 
