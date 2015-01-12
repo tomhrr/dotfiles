@@ -36,7 +36,7 @@ autocmd BufRead *.html set tw=0
 autocmd BufRead *.dt   set syntax=lisp
 autocmd BufRead /tmp/mutt-* :silent! %s/^\([>|]\s\?\)\+/\=substitute(submatch(0), '\s', '', 'g').' '
 
-let g:ctrlp_custom_ignore = '\.o'
+let g:ctrlp_custom_ignore = 'target\|\.o'
 
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
 let g:syntastic_enable_perl_checker = 1
