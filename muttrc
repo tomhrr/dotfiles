@@ -10,6 +10,12 @@ set wait_key=no
 set mailcap_path="$HOME/.mailcap:/etc/mailcap:/usr/lib/mime/mailcap"
 set timeout=30
 set mail_check=5
+set sort_alias=alias
+set reverse_alias=yes
+
+auto_view text/html
+alternative_order text/plain
+
 bind index N search-opposite
 bind pager N search-opposite
 
@@ -34,9 +40,6 @@ macro index .a "lall\n"
 macro index .t ":set sort=threads\n"
 macro index .d ":set sort=date\n"
 macro index .m "T.*\n;WN" "Mark all messages as read"
-
-set sort_alias=alias
-set reverse_alias=yes
 
 macro index \cb "\
 : set my_tmp_pipe_decode=\$pipe_decode\n\
