@@ -5,6 +5,7 @@ map <C-T> :NERDTreeToggle<CR>
 map <C-k> :lprevious<CR>
 map <C-l> :lnext<CR>
 map <leader>gf :e <cfile><cr>
+map <C-F> :CtrlP<CR><C-\>w
 :command S SyntasticCheck
 
 set history=1000
