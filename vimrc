@@ -29,13 +29,13 @@ syntax enable
 colorscheme default
 set tw=70
 
-autocmd BufRead *.txt  set syntax=off
-autocmd BufRead *.t    set syntax=perl
-autocmd BufRead *.spec set tw=0
-autocmd BufRead *.html set tw=0
-autocmd BufRead *.dt   set syntax=lisp
+autocmd BufNewFile,BufRead *.txt  set syntax=off
+autocmd BufNewFile,BufRead *.t    set syntax=perl
+autocmd BufNewFile,BufRead *.spec set tw=0
+autocmd BufNewFile,BufRead *.html set tw=0
+autocmd BufNewFile,BufRead *.dt   set filetype=lisp
 
-let g:ctrlp_custom_ignore = '\.o'
+let g:ctrlp_custom_ignore = '\.o\|target'
 
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
 let g:syntastic_enable_perl_checker = 1
