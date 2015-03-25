@@ -34,7 +34,6 @@ autocmd BufNewFile,BufRead *.txt  set syntax=off
 autocmd BufNewFile,BufRead *.t    set syntax=perl
 autocmd BufNewFile,BufRead *.spec set tw=0
 autocmd BufNewFile,BufRead *.html set tw=0
-autocmd BufNewFile,BufRead *.dt   set syntax=lisp
 autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/^\([>|]\s\?\)\+/\=substitute(submatch(0), '\s', '', 'g').' '
 
 let g:ctrlp_custom_ignore = 'target\|\.o'
@@ -43,5 +42,3 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_perl_checkers = ['perl', 'podchecker']
 let g:syntastic_always_populate_loc_list = 1
-
-execute pathogen#infect()
