@@ -1,6 +1,7 @@
 set nocompatible
 
 map ;; i#!/usr/bin/perluse warnings;use strict;
+map <C-U> :!urlview %<CR>
 map <C-T> :NERDTreeToggle<CR>
 map <C-k> :lprevious<CR>
 map <C-l> :lnext<CR>
@@ -37,7 +38,7 @@ autocmd BufNewFile,BufRead *.html set tw=0
 autocmd BufNewFile,BufRead *.dt   set syntax=lisp
 autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/^\([>|]\s\?\)\+/\=substitute(submatch(0), '\s', '', 'g').' '
 
-let g:ctrlp_custom_ignore = 'target\|\.o'
+let g:ctrlp_custom_ignore = 'target'
 
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
 let g:syntastic_enable_perl_checker = 1
