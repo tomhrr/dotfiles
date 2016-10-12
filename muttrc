@@ -12,6 +12,7 @@ set timeout=30
 set mail_check=5
 set sort_alias=alias
 set reverse_alias=yes
+set mime_forward=yes
 
 auto_view text/html
 alternative_order text/plain
