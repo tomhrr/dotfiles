@@ -31,6 +31,7 @@ syntax enable
 colorscheme default
 set tw=70
 
+autocmd BufNewFile,BufRead *.s    set syntax=off
 autocmd BufNewFile,BufRead *.txt  set syntax=off
 autocmd BufNewFile,BufRead *.t    set syntax=perl
 autocmd BufNewFile,BufRead *.spec set tw=0
