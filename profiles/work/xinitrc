@@ -2,4 +2,10 @@ xsetroot -solid grey
 xset r rate 250 50 &
 xrdb -merge $HOME/.Xresources
 xsetroot -cursor_name left_ptr
-exec xmonad 
+ulimit -c unlimited
+urxvtd &
+#export MAWLED_TERMINAL=urxvt
+/home/tomh/scripts/xrandr-monitor
+urxvt &
+exec xmonad
+#exec mawled

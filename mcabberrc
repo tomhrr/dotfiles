@@ -42,3 +42,5 @@ alias rf = roster unread_first
 alias rt = roster top
 alias rb = roster bottom
 alias rs = roster search
+alias sa = status away
+alias so = status online
