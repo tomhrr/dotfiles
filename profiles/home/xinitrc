@@ -4,4 +4,5 @@ xset r rate 250 50
 xset b off
 xrdb -load $HOME/.Xresources
 urxvtd &
-exec xmonad
+export MAWLED_TERMINAL=urxvt
+exec mawled

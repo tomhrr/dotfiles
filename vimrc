@@ -31,11 +31,16 @@ syntax enable
 colorscheme default
 set tw=70
 
+autocmd BufNewFile,BufRead *.s    set syntax=off
 autocmd BufNewFile,BufRead *.txt  set syntax=off
 autocmd BufNewFile,BufRead *.t    set syntax=perl
 autocmd BufNewFile,BufRead *.spec set tw=0
 autocmd BufNewFile,BufRead *.html set tw=0
 autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/^\([>|]\s\?\)\+/\=substitute(submatch(0), '\s', '', 'g').' '
+autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/¹/'/g
+autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/²/'/g
+autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/³/'/g
+autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/Œ/'/g
 
 let g:ctrlp_custom_ignore = 'target'
 

@@ -12,6 +12,7 @@ set timeout=30
 set mail_check=5
 set sort_alias=alias
 set reverse_alias=yes
+set header_cache="/home/tomh/.mailbox/mutt_cache/"
 set mime_forward=yes
 
 auto_view text/html
