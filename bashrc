@@ -68,4 +68,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=$PATH:/usr/local/maven/bin:/usr/local/sbin:/usr/sbin:/sbin
+export PATH=$PATH:/usr/local/maven/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/tomh/bin
