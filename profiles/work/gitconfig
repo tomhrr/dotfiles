@@ -3,6 +3,7 @@
 	email = tomh@apnic.net
 [core]
 	deltaBaseCacheLimit = 1G
+	editor = vim
 [push]
 	default = matching
 [init]

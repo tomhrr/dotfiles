@@ -7,8 +7,8 @@ xrdb -merge $HOME/.Xresources
 xsetroot -cursor_name left_ptr
 ulimit -c unlimited
 urxvtd &
-#export MAWLED_TERMINAL=urxvt
-/home/tomh/scripts/xrandr-monitor
+export MAWLED_TERMINAL=urxvt
+#/home/tomh/scripts/xrandr-monitor
 urxvt &
 exec xmonad
 #exec mawled
