@@ -15,8 +15,12 @@ set reverse_alias=yes
 set header_cache="/home/tomh/.mailbox/mutt_cache/"
 set mime_forward=yes
 set index_format="%4C %Z %-1y %{%d/%m} %-15.15L %s"
+set postpone=yes
+set recall=no
 
 auto_view text/html
+auto_view text/calendar
+auto_view application/ics
 alternative_order text/plain
 
 bind index N search-opposite

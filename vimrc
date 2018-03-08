@@ -25,6 +25,9 @@ set expandtab
 set autoindent
 set hlsearch
 set incsearch
+set path+=**
+set wildmenu
+set wildmode=list:longest,full
 
 set backspace=indent,eol,start
 syntax enable

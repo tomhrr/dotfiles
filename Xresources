@@ -1,6 +1,6 @@
 XTerm*wideFont: -*-fixed-medium-r-*-*-*-*-*-*-*-*-iso10646-*
-XTerm*background: white
-XTerm*foreground: black
+XTerm*background: black
+XTerm*foreground: grey
 XTerm*pointerColor: red
 XTerm*pointerColorBackground: black
 XTerm*pointerMode: 2
