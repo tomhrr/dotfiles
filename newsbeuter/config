@@ -14,6 +14,6 @@ bind-key RIGHT next article
 bind-key RIGHT pagedown feedlist
 bind-key RIGHT pagedown articlelist
 bind-key ^B show-urls
-browser chromium
+browser /home/tomh/bin/firefox
 article-sort-order date desc
 external-url-viewer "urlview"

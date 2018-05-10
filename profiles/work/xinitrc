@@ -1,11 +1,14 @@
+killall xautolock
+xautolock -time 10 -locker "i3lock" &
 xsetroot -solid grey
+xmodmap /home/tomh/dotfiles/profiles/work/Xmodmap2
 xset r rate 250 50 &
 xrdb -merge $HOME/.Xresources
 xsetroot -cursor_name left_ptr
 ulimit -c unlimited
 urxvtd &
-#export MAWLED_TERMINAL=urxvt
-/home/tomh/scripts/xrandr-monitor
+export MAWLED_TERMINAL=urxvt
+#/home/tomh/scripts/xrandr-monitor
 urxvt &
 exec xmonad
 #exec mawled

@@ -7,6 +7,7 @@ map <C-k> :lprevious<CR>
 map <C-l> :lnext<CR>
 map <leader>gf :e <cfile><cr>
 map <leader>p :CtrlP<CR><C-\>w
+map <leader>ge :%s/>[  ]\{4}/>>/<CR>
 :command S SyntasticCheck
 
 set history=1000
@@ -24,6 +25,9 @@ set expandtab
 set autoindent
 set hlsearch
 set incsearch
+set path+=**
+set wildmenu
+set wildmode=list:longest,full
 
 set backspace=indent,eol,start
 syntax enable

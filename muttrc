@@ -14,8 +14,13 @@ set sort_alias=alias
 set reverse_alias=yes
 set header_cache="/home/tomh/.mailbox/mutt_cache/"
 set mime_forward=yes
+set index_format="%4C %Z %-1y %{%d/%m} %-15.15L %s"
+set postpone=yes
+set recall=no
 
 auto_view text/html
+auto_view text/calendar
+auto_view application/ics
 alternative_order text/plain
 
 bind index N search-opposite
@@ -38,10 +43,13 @@ color markers    red          brightwhite
 
 macro index .n "l~N\n"
 macro index .o "l~O\n"
+macro index .f "l~yF\n"
 macro index .a "lall\n"
 macro index .t ":set sort=threads\n"
 macro index .d ":set sort=date\n"
 macro index .m "T.*\n;WN" "Mark all messages as read"
+macro index f "YF\nJ"
+macro index F "Y\nJ"
 
 macro index \cb "\
 : set my_tmp_pipe_decode=\$pipe_decode\n\
