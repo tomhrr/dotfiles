@@ -56,6 +56,9 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias make='make -j2'
+alias mutt='LD_LIBRARY_PATH=/usr/local/lib mutt'
+alias tmux='tmux -2'
+alias gotop='gotop -c default-dark'
 
 # Enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -68,5 +71,28 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=$PATH:/usr/local/maven/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/tomh/bin:/home/tomh/bin/todo
+export GOPATH=/home/tomh/prog/go
+
+export PATH=/home/tomh/bin:$PATH:/usr/local/maven/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/tomh/bin:/home/tomh/bin/todo:$GOROOT/bin:$GOPATH/bin
+
+if [ -n "$PATH" ]; then
+  old_PATH=$PATH:; PATH=
+  while [ -n "$old_PATH" ]; do
+    x=${old_PATH%%:*}       # the first remaining entry
+    case $PATH: in
+      *:"$x":*) ;;         # already there
+      *) PATH=$PATH:$x;;    # not there yet
+    esac
+    old_PATH=${old_PATH#*:}
+  done
+  PATH=${PATH#:}
+  unset old_PATH x
+fi
+
 export EDITOR=vim
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/tomh/google-cloud-sdk/path.bash.inc' ]; then . '/home/tomh/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/tomh/google-cloud-sdk/completion.bash.inc' ]; then . '/home/tomh/google-cloud-sdk/completion.bash.inc'; fi

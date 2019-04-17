@@ -24,9 +24,12 @@ export LANG=en_AU.UTF-8
 export BROWSER=chromium
 export KARAF_HOME_DEV=~/work/karaf
 export JAVA_ARGS="-Xms1500M -Xmx1500M"
-export PATH=$PATH:/usr/local/maven/bin:/usr/local/sbin:/usr/sbin:/sbin
+export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
 export TZ='Australia/Brisbane'
 export BATCH=YES
+export M2_HOME=/usr/share/maven
+export _JAVA_OPTIONS=-Djdk.net.URLClassPath.disableClassPathURLCheck=true
+export TILLER_NAMESPACE=tiller
 
 if [ "$TERM" == "screen-256color" ]; then
     if hash infocmp 2>/dev/null; then
@@ -40,3 +43,5 @@ fi
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
+
+export PATH="$HOME/.cargo/bin:$PATH"
