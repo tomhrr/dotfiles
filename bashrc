@@ -71,8 +71,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export GOPATH=/home/tomh/prog/go
-
 export PATH=/home/tomh/bin:$PATH:/usr/local/maven/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/tomh/bin:/home/tomh/bin/todo:$GOROOT/bin:$GOPATH/bin
 
 if [ -n "$PATH" ]; then

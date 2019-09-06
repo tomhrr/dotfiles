@@ -1,10 +1,10 @@
 XTerm*wideFont: -*-fixed-medium-r-*-*-*-*-*-*-*-*-iso10646-*
 XTerm*background: black
-XTerm*foreground: grey
+XTerm*foreground: gray
 XTerm*pointerColor: red
 XTerm*pointerColorBackground: black
 XTerm*pointerMode: 2
-XTerm*cursorColor: navy
+XTerm*cursorColor: gray
 XTerm*internalBorder: 3
 XTerm*loginShell: true
 XTerm*scrollBar: false
@@ -16,6 +16,8 @@ XTerm*utf8: 2
 
 URxvt*boldFont: 
 URxvt*italicFont: 
+URxvt*background: black
+URxvt*foreground: gray
 URxvt*scrollBar: false
 URxvt*scrollKey: true
 URxvt*pointerBlank: true
@@ -24,8 +26,6 @@ urxvt*scrollBar: false
 urxvt*secondaryScroll: true
 urxvt*saveLines: 65535
 urxvt*cursorBlink: false
-URxvt*background: white
-URxvt*foreground: black
 URxvt*keysym.M-Down: \033[1;3B
 URxvt*keysym.M-Up: \033[1;3A
 URxvt*keysym.M-Left: \033[1;3D
