@@ -1,0 +1,73 @@
+set mbox_type=Maildir
+set editor="vim"
+set quit=ask-yes
+set use_envelope_from
+set sort=date
+set sort_browser=unsorted
+set sleep_time=0
+set status_format="[%v on %h] %n new; %b with new"
+set wait_key=no
+set mailcap_path="$HOME/.mailcap:/etc/mailcap:/usr/lib/mime/mailcap"
+set timeout=30
+set mail_check=5
+set sort_alias=alias
+set reverse_alias=yes
+set header_cache="/home/tomh/.mailbox/mutt_cache/"
+set mime_forward=yes
+set index_format="%4C %Z %-1y %{%d/%m} %-15.15L %s"
+set postpone=yes
+set recall=no
+#set sendmail=/usr/local/bin/msmtpq
+set sendmail=/usr/local/bin/paws-send
+set sendmail_wait=-1
+
+auto_view text/html
+auto_view text/calendar
+auto_view application/ics
+alternative_order text/plain
+
+bind index N search-opposite
+bind pager N search-opposite
+
+color hdrdefault black        cyan
+color quoted     red          brightwhite
+color signature  brightblack  brightwhite
+color indicator  black        cyan
+color attachment black        green
+color error      red          brightwhite
+color message    black        brightwhite
+color search     brightwhite  magenta
+color status     brightwhite  black
+color tree       red          brightwhite
+color normal     black        brightwhite
+color tilde      green        brightwhite
+color bold       brightwhite  black
+color markers    red          brightwhite
+
+macro index .n "l~N\n"
+macro index .o "l~O\n"
+macro index .f "l~yF\n"
+macro index .a "lall\n"
+macro index .t ":set sort=threads\n"
+macro index .d ":set sort=date\n"
+macro index .m "T.*\n;WN" "Mark all messages as read"
+macro index f "YF\nJ"
+macro index F "Y\nJ"
+
+macro index \cb "\
+: set my_tmp_pipe_decode=\$pipe_decode\n\
+: set pipe_decode\n\
+|urlview\n\
+: set pipe_decode=\$my_tmp_pipe_decode\n\
+: unset my_tmp_pipe_decode\n" \
+'call urlview to extract URLs out of a message'
+
+macro pager \cb "\
+: set my_tmp_pipe_decode=\$pipe_decode\n\
+: set pipe_decode\n\
+|urlview\n\
+: set pipe_decode=\$my_tmp_pipe_decode\n\
+: unset my_tmp_pipe_decode\n" \
+'call urlview to extract URLs out of a message'
+
+source ~/.mutt/extra
