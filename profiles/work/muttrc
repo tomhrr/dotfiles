@@ -20,6 +20,7 @@ set recall=no
 #set sendmail=/usr/local/bin/msmtpq
 set sendmail=/usr/local/bin/paws-send
 set sendmail_wait=-1
+set browser_sticky_cursor=no
 
 auto_view text/html
 auto_view text/calendar
@@ -31,6 +32,8 @@ bind pager N search-opposite
 
 color hdrdefault black        cyan
 color quoted     red          brightwhite
+color quoted1    blue         brightwhite
+color quoted2    magenta      brightwhite
 color signature  brightblack  brightwhite
 color indicator  black        cyan
 color attachment black        green

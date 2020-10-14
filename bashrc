@@ -88,9 +88,12 @@ if [ -n "$PATH" ]; then
 fi
 
 export EDITOR=vim
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/tomh/google-cloud-sdk/path.bash.inc' ]; then . '/home/tomh/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/tomh/google-cloud-sdk/completion.bash.inc' ]; then . '/home/tomh/google-cloud-sdk/completion.bash.inc'; fi
+
+if [[ -v INSIDE_EMACS ]]; then
+    export TERM=screen
+fi

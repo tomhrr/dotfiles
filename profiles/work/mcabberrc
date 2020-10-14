@@ -44,3 +44,8 @@ alias rb = roster bottom
 alias rs = roster search
 alias sa = status away
 alias so = status online
+set ssl_ignore_checks = 1
+set fifo_name = ~/.mcabber/mcabber.fifo
+set fifo_hide_commands = 0
+set fifo_ignore = 0
+module load fifo

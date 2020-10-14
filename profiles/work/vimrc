@@ -1,8 +1,8 @@
 set nocompatible
+filetype off
 
 map ;; i#!/usr/bin/perluse warnings;use strict;
 map <C-U> :!urlview %<CR>
-map <C-T> :NERDTreeToggle<CR>
 map <C-k> :lprevious<CR>
 map <C-l> :lnext<CR>
 map <leader>gf :e <cfile><cr>
@@ -16,6 +16,7 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
+nnoremap <C-o> :e#<CR>
 set ruler
 
 set shiftwidth=4
@@ -52,3 +53,10 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_perl_checkers = ['perl', 'podchecker']
 let g:syntastic_always_populate_loc_list = 1
+let g:LargeFile = 10
+
+" za - toggle fold at cursor.
+"augroup XML
+"    autocmd!
+"    autocmd FileType xml setlocal foldmethod=indent foldlevelstart=999 foldminlines=0
+"augroup END
