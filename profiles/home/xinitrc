@@ -1,8 +1,10 @@
 #!/bin/sh
+setxkbmap -option
 xmodmap $HOME/.Xmodmap
 xset r rate 250 50
 xset b off
 xrdb -load $HOME/.Xresources
 urxvtd &
-export MAWLED_TERMINAL=urxvt
-exec mawled
+redshift >/dev/null 2>&1 &
+export MAWLED_TERMINAL="urxvt +ptab"
+exec xmonad

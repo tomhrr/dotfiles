@@ -14,7 +14,7 @@ set history=1000
 set wildmode=list:longest
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
-nnoremap <C-e> 3<C-e>
+nnoremap <C-e> 4<C-e>
 nnoremap <C-y> 3<C-y>
 set ruler
 
