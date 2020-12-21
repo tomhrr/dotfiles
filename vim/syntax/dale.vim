@@ -69,7 +69,7 @@ endif
 syn match lispNumber            "-\=\d\+"
 syn match lispNumber            !0x\d\+!
 
-syn match lispEscapeSpecial     !#\\\%(SPACE\|NEWLINE\|TAB\|CARRIAGE\|EOF\)!
+syn match lispEscapeSpecial     !#\\\%(SPACE\|NEWLINE\|TAB\|CARRIAGE\|"\|EOF\)!
 syn match lispEscapeSpecial     "\<+[a-zA-Z_][a-zA-Z_0-9-]*+\>"
 
 syn match lispConcat            "\s\.\s"
