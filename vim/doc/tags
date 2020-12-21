@@ -72,11 +72,15 @@
 :CtrlPRoot	ctrlp.txt	/*:CtrlPRoot*
 :CtrlPTag	ctrlp.txt	/*:CtrlPTag*
 :CtrlPUndo	ctrlp.txt	/*:CtrlPUndo*
+:Large	LargeFile.txt	/*:Large*
+:Unlarge	LargeFile.txt	/*:Unlarge*
 Align-copyright	Align.txt	/*Align-copyright*
 ClearAllCtrlPCaches	ctrlp.txt	/*ClearAllCtrlPCaches*
 ClearCtrlPCache	ctrlp.txt	/*ClearCtrlPCache*
 ControlP	ctrlp.txt	/*ControlP*
 CtrlP	ctrlp.txt	/*CtrlP*
+LargeFile-copyright	LargeFile.txt	/*LargeFile-copyright*
+LargeFile.txt	LargeFile.txt	/*LargeFile.txt*
 ResetCtrlP	ctrlp.txt	/*ResetCtrlP*
 align	Align.txt	/*align*
 align-align	Align.txt	/*align-align*
@@ -191,3 +195,5 @@ g:ctrlp_mru_files	ctrlp.txt	/*g:ctrlp_mru_files*
 g:ctrlp_open_multi	ctrlp.txt	/*g:ctrlp_open_multi*
 g:ctrlp_persistent_input	ctrlp.txt	/*g:ctrlp_persistent_input*
 g:ctrlp_regexp_search	ctrlp.txt	/*g:ctrlp_regexp_search*
+largefile	LargeFile.txt	/*largefile*
+largefile-history	LargeFile.txt	/*largefile-history*

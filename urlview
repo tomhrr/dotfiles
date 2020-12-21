@@ -1,1 +1,1 @@
-COMMAND /home/tomh/bin/firefox %s
+COMMAND /usr/local/bin/qutebrowser %s

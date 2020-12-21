@@ -29,20 +29,20 @@ alternative_order text/plain
 bind index N search-opposite
 bind pager N search-opposite
 
-color hdrdefault black        cyan
-color quoted     red          brightwhite
-color signature  brightblack  brightwhite
-color indicator  black        cyan
-color attachment black        green
-color error      red          brightwhite
-color message    black        brightwhite
-color search     brightwhite  magenta
-color status     brightwhite  black
-color tree       red          brightwhite
-color normal     black        brightwhite
-color tilde      green        brightwhite
-color bold       brightwhite  black
-color markers    red          brightwhite
+color hdrdefault white        brightblack
+color quoted     green        black
+color signature  brightwhite  black
+color indicator  white        blue
+color attachment white        brightblack
+color error      red          black
+color message    white        black
+color search     black        magenta
+color status     black        white
+color tree       red          black
+color normal     white        black
+color tilde      green        black
+color bold       black        white
+color markers    red          black
 
 macro index .n "l~N\n"
 macro index .o "l~O\n"
