@@ -6,11 +6,13 @@ xset r rate 250 50 &
 xrdb -merge $HOME/.Xresources
 xsetroot -cursor_name left_ptr
 ulimit -c unlimited
+xbanish &
 urxvtd &
 redshift &
 autocutsel-local &
 export MAWLED_TERMINAL=urxvt
 #/home/tomh/scripts/xrandr-monitor
 urxvt &
+statnot &
 exec xmonad
 #exec mawled

@@ -3,10 +3,12 @@ filetype off
 
 map ;; i#!/usr/bin/perluse warnings;use strict;
 map <C-U> :!urlview %<CR>
-map <C-k> :lprevious<CR>
-map <C-l> :lnext<CR>
+map <C-l> :CtrlPTag<CR>
+map <C-d> :CtrlPGrep<CR>
 map <leader>gf :e <cfile><cr>
 map <leader>p :CtrlP<CR><C-\>w
+map <leader>l :CtrlPTag<CR><C-\>w
+map <leader>d :CtrlPGrep<CR><C-\>w
 map <leader>ge :%s/>[  ]\{4}/>>/<CR>
 :command S SyntasticCheck
 
@@ -60,3 +62,8 @@ let g:LargeFile = 10
 "    autocmd!
 "    autocmd FileType xml setlocal foldmethod=indent foldlevelstart=999 foldminlines=0
 "augroup END
+
+set tags=./tags,tags;
+
+let g:ctrlp_max_height = 100
+autocmd BufWritePost *.pl,*.pm,*.java silent! !/home/tomh/bin/wrapper-ctags . &

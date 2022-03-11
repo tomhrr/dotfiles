@@ -5,7 +5,7 @@ set use_envelope_from
 set sort=date
 set sort_browser=unsorted
 set sleep_time=0
-set status_format="[%v on %h] %n new; %b with new"
+set status_format="[%v] %n new; %b with new"
 set wait_key=no
 set mailcap_path="$HOME/.mailcap:/etc/mailcap:/usr/lib/mime/mailcap"
 set timeout=30
@@ -22,9 +22,8 @@ set sendmail=/usr/local/bin/paws-send
 set sendmail_wait=-1
 set browser_sticky_cursor=no
 
-auto_view text/html
-auto_view text/calendar
-auto_view application/ics
+#alternative_order text/html text/plain
+auto_view text/html text/calendar application/ics
 alternative_order text/plain
 
 bind index N search-opposite

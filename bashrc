@@ -34,6 +34,9 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 HOSTSHORT=`hostname | sed -e 's/\(.*\)\..*\..*/\1/' | sed -e 's/\.local//'`
+if [[ "$HOSTSHORT" =~ ^TomH ]]; then
+    HOSTSHORT="main";
+fi
 PS1='${debian_chroot:+($debian_chroot)}\u@$HOSTSHORT:\W\$ '
 
 # Enable color support of ls and also add handy aliases. (Parts taken
@@ -71,7 +74,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=/home/tomh/bin:$PATH:/usr/local/maven/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/tomh/bin:/home/tomh/bin/todo:$GOROOT/bin:$GOPATH/bin
+export PATH=/home/tomh/bin:$PATH:/usr/local/maven/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/tomh/bin:/home/tomh/bin/todo:$GOROOT/bin:$GOPATH/bin:/usr/local/flyway-7.11.4
 
 if [ -n "$PATH" ]; then
   old_PATH=$PATH:; PATH=
@@ -97,3 +100,6 @@ if [ -f '/home/tomh/google-cloud-sdk/completion.bash.inc' ]; then . '/home/tomh/
 if [[ -v INSIDE_EMACS ]]; then
     export TERM=screen
 fi
+
+source /home/tomh/.bash-kubectl-completion
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
