@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1).
-HISTSIZE=100000
-HISTFILESIZE=200000
+export HISTSIZE='INFINITY'
+export HISTFILESIZE='INFINITY'
 
 # Check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -101,5 +101,10 @@ if [[ -v INSIDE_EMACS ]]; then
     export TERM=screen
 fi
 
-source /home/tomh/.bash-kubectl-completion
+if [ -f "/home/tomh/.bash-kubectl-completion" ]; then
+    source /home/tomh/.bash-kubectl-completion
+fi
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+GPG_TTY=$(tty)
+export GPG_TTY

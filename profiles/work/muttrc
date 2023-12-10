@@ -17,25 +17,25 @@ set mime_forward=yes
 set index_format="%4C %Z %-1y %{%d/%m} %-15.15L %s"
 set postpone=yes
 set recall=no
-#set sendmail=/usr/local/bin/msmtpq
 set sendmail=/usr/local/bin/paws-send
 set sendmail_wait=-1
 set browser_sticky_cursor=no
 
-#alternative_order text/html text/plain
 auto_view text/html text/calendar application/ics
-alternative_order text/plain
+
+message-hook ~A 'unalternative_order *; alternative_order text/plain'
 
 bind index N search-opposite
 bind pager N search-opposite
 
-color hdrdefault black        cyan
+color hdrdefault black        color222
+color header     black        color228 "^Subject:"
 color quoted     red          brightwhite
 color quoted1    blue         brightwhite
 color quoted2    magenta      brightwhite
 color signature  brightblack  brightwhite
-color indicator  black        cyan
-color attachment black        green
+color indicator  black        color219
+color attachment black        color121
 color error      red          brightwhite
 color message    black        brightwhite
 color search     brightwhite  magenta
