@@ -44,6 +44,9 @@ if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
 
+. "$HOME/.cargo/env"
+
+GNUPGHOME=/home/tomh/.gnupg
 export PATH="$HOME/.cargo/bin:$PATH"
 
 HISTCONTROL=ignoreboth

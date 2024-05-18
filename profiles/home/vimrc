@@ -1,7 +1,7 @@
 set nocompatible
 
 map ;; i#!/usr/bin/perluse warnings;use strict;
-map <C-U> :!urlview %<CR>
+map <C-U> :!"/usr/bin/urlview %" exec<CR>
 map <C-T> :NERDTreeToggle<CR>
 map <C-k> :lprevious<CR>
 map <C-l> :lnext<CR>
@@ -35,6 +35,7 @@ syntax enable
 colorscheme default
 set tw=70
 
+autocmd BufNewFile,BufRead *.ch   set syntax=off
 autocmd BufNewFile,BufRead *.s    set syntax=off
 autocmd BufNewFile,BufRead *.txt  set syntax=off
 autocmd BufNewFile,BufRead *.t    set syntax=perl
@@ -52,3 +53,9 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_perl_checkers = ['perl', 'podchecker']
 let g:syntastic_always_populate_loc_list = 1
+
+autocmd Filetype rust set comments^=:///
+
+set shell=/usr/local/bin/cosh
+set shellcmdflag=-e
+set noshelltemp
