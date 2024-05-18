@@ -1,8 +1,12 @@
 set nocompatible
 filetype off
 
+set shell=/usr/local/bin/cosh
+set shellcmdflag=-e
+set noshelltemp
+
 map ;; i#!/usr/bin/perluse warnings;use strict;
-map <C-U> :!urlview %<CR>
+map <C-U> :!$ urlview %<CR>
 map <C-l> :CtrlPTag<CR>
 map <C-d> :CtrlPGrep<CR>
 map <leader>gf :e <cfile><cr>
@@ -67,8 +71,7 @@ let g:LargeFile = 10
 "augroup END
 
 set tags=./tags,tags;
-set shell=/bin/bash
 
 let g:ctrlp_max_height = 100
 let g:ctrlp_max_files=0
-autocmd BufWritePost *.pl,*.pm,*.java,*.c silent! !/home/tomh/bin/wrapper-ctags . &
+"autocmd BufWritePost *.pl,*.pm,*.java,*.c,*.py silent! !$ /home/tomh/bin/wrapper-ctags .
