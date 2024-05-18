@@ -1,9 +1,11 @@
 [user]
 	name = Tom Harrison
-	email = tomh5908@gmail.com
+	email = tomhrr@tomhrr.org
 [core]
 	deltaBaseCacheLimit = 1G
 [push]
 	default = matching
 [init]
 	templatedir = ~/.git
+[safe]
+	directory = /home/tomh/work/cosh

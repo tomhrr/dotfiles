@@ -71,7 +71,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=/home/tomh/bin:$PATH:/usr/local/maven/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/tomh/bin:/home/tomh/bin/todo:$GOROOT/bin:$GOPATH/bin
+export PATH=/home/tomh/bin:$PATH:/usr/local/sbin:/usr/sbin:/sbin:/home/tomh/bin:$GOROOT/bin:$GOPATH/bin
 
 if [ -n "$PATH" ]; then
   old_PATH=$PATH:; PATH=
@@ -97,3 +97,4 @@ if [ -f '/home/tomh/google-cloud-sdk/completion.bash.inc' ]; then . '/home/tomh/
 if [[ -v INSIDE_EMACS ]]; then
     export TERM=screen
 fi
+. "$HOME/.cargo/env"
