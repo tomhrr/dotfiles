@@ -14,3 +14,4 @@ hi String 	ctermfg=darkred term=NONE
 hi Identifier 	ctermfg=darkmagenta term=NONE
 hi Statement 	ctermfg=black term=NONE
 hi xmlAttrib    ctermfg=darkblue term=NONE
+hi Visual       ctermbg=yellow term=NONE

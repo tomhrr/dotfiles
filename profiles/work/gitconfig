@@ -9,3 +9,5 @@
 	default = matching
 [init]
 	templatedir = ~/.git
+[pull]
+	rebase = false

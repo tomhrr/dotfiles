@@ -3,10 +3,12 @@ filetype off
 
 map ;; i#!/usr/bin/perluse warnings;use strict;
 map <C-U> :!urlview %<CR>
-map <C-k> :lprevious<CR>
-map <C-l> :lnext<CR>
+map <C-l> :CtrlPTag<CR>
+map <C-d> :CtrlPGrep<CR>
 map <leader>gf :e <cfile><cr>
 map <leader>p :CtrlP<CR><C-\>w
+map <leader>l :CtrlPTag<CR><C-\>w
+map <leader>d :CtrlPGrep<CR><C-\>w
 map <leader>ge :%s/>[  ]\{4}/>>/<CR>
 :command S SyntasticCheck
 
@@ -41,13 +43,16 @@ autocmd BufNewFile,BufRead *.txt  set syntax=off
 autocmd BufNewFile,BufRead *.t    set syntax=perl
 autocmd BufNewFile,BufRead *.spec set tw=0
 autocmd BufNewFile,BufRead *.html set tw=0
+autocmd BufNewFile,BufRead *.ch   set tw=0
 autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/^\([>|]\s\?\)\+/\=substitute(submatch(0), '\s', '', 'g').' '
 autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/¹/'/g
 autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/²/'/g
 autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/³/'/g
 autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/Œ/'/g
+autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s//\r> /g
+autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/﻿//
 
-let g:ctrlp_custom_ignore = 'target'
+let g:ctrlp_custom_ignore = 'blib'
 
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
 let g:syntastic_enable_perl_checker = 1
@@ -60,3 +65,10 @@ let g:LargeFile = 10
 "    autocmd!
 "    autocmd FileType xml setlocal foldmethod=indent foldlevelstart=999 foldminlines=0
 "augroup END
+
+set tags=./tags,tags;
+set shell=/bin/bash
+
+let g:ctrlp_max_height = 100
+let g:ctrlp_max_files=0
+autocmd BufWritePost *.pl,*.pm,*.java,*.c silent! !/home/tomh/bin/wrapper-ctags . &
