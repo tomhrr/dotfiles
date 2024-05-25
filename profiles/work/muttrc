@@ -27,6 +27,7 @@ message-hook ~A 'unalternative_order *; alternative_order text/plain'
 
 bind index N search-opposite
 bind pager N search-opposite
+bind index G last-entry
 
 color hdrdefault black        color222
 color header     black        color228 "^Subject:"
