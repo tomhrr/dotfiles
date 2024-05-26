@@ -32,11 +32,11 @@
 
     eDP-1 lkey var; lkey !;
 
-    dd @; keys; [eDP-1 =; not] grep;
+    dd @; keys; sort; [eDP-1 =; not] grep;
     [dd @; swap; get; 0 get; 0 =; not] first;
     mkey var; mkey !;
 
-    dd @; keys;
+    dd @; keys; sort;
     [dd @; swap; get; 0 get; 0 =] grep;
     ["xrandr --output {} --off" fmt; dup; println; exec; drop] for;
 
@@ -56,7 +56,7 @@
     vars @; external get; if;
         dd @; mkey @; get; clone; shift-all; swap;
         vars @; laptop get; is-null; not; if;
-            dd @; lkey @; .s; get; 0 get;
+            dd @; lkey @; get; 0 get;
             mkey @;
             "xrandr --output {} --pos {}x0 --mode {}x{} --rotate normal" fmt;
             dup; println;
@@ -73,7 +73,6 @@
         dup; println;
         exec; drop;
     then;
-    drop;
     ,,
 
 : xrandr.external h(external .t) xrandr; ,,

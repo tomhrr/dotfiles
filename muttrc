@@ -68,6 +68,7 @@ macro index .d ":set sort=date\n"
 macro index .m "T.*\n;WN" "Mark all messages as read"
 macro index f "YF\nJ"
 macro index F "Y\nJ"
+macro index y '<browse-mailboxes><first-entry>'
 
 macro index \cu "\
 : set my_tmp_pipe_decode=\$pipe_decode\n\
