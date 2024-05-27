@@ -66,8 +66,8 @@ macro index .a "lall\n"
 macro index .t ":set sort=threads\n"
 macro index .d ":set sort=date\n"
 macro index .m "T.*\n;WN" "Mark all messages as read"
-macro index f "YF\nJ"
-macro index F "Y\nJ"
+macro index f "W!"
+macro index F "w!"
 macro index y '<browse-mailboxes><first-entry>'
 
 macro index \cu "\
