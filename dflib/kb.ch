@@ -1,19 +1,30 @@
-h(laptop   (dotfiles/profiles/work/Xmodmap2)
-  apple    (dotfiles/profiles/home/Xmodmap
-            .XmodmapE)
-  keychron (.XmodmapK)
-  none     ())
+h(laptop      (dotfiles/profiles/work/Xmodmap2)
+  apple       (dotfiles/profiles/home/Xmodmap
+               .XmodmapE)
+  keychrontkl (.XmodmapKTKL)
+  keychron    (.XmodmapK60)
+  none        ())
 kb-files var; kb-files !;
+
+: exec2
+    dup;
+    dup; println;
+    exec; 0 =; not; if;
+        "failed to run program ('{}')" fmt; error;
+    else;
+        drop;
+    then;
+    ,,
 
 : kb-set
     kb-files @; swap; get; dup; is-null; if;
         drop;
         "keyboard not found" error;
     then;
-    "setxkbmap -layout us" exec; drop;
-    "xset r rate 250 50" exec; drop;
-    [HOME getenv; "xmodmap {}/{}" fmt; exec; drop] for;
-    HOME getenv; "xmodmap {}/dotfiles/Xmodmap-common" fmt; exec; drop;
+    "setxkbmap -layout us" exec2;
+    "xset r rate 250 50" exec2;
+    HOME getenv; "xmodmap {}/dotfiles/Xmodmap-common" fmt; exec2;
+    clone; [HOME getenv; "xmodmap {}/{}" fmt; exec2] for;
     ,,
 
 : kb-set.apple    apple    kb-set; ,,

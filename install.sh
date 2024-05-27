@@ -5,7 +5,7 @@
 ############################
 
 dir=~/dotfiles
-files="vimrc newsbeuter vim tmux.conf bash_profile bashrc git mcabberrc muttrc Xresources urlview dflib"
+files="vimrc newsbeuter vim tmux.conf bash_profile bashrc git mcabberrc muttrc Xresources urlview dflib XmodmapKTKL XmodmapK60"
 olddir=~/dotfiles-old
 if [ -n "$1" ]
 then
