@@ -4,6 +4,6 @@ add Control = Control_L
 remove mod4 = Super_L Super_R
 remove ctrl = Super_L Super_R
 remove ctrl = Alt_L Alt_R
-keycode 9 = Escape grave asciitilde
+keycode 9 = Escape asciitilde grave
 add mod1 = Super_L Super_R
 keycode 105 = Mode_switch NoSymbol Mode_switch NoSymbol Mode_switch

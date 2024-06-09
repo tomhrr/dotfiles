@@ -75,3 +75,7 @@ set tags=./tags,tags;
 let g:ctrlp_max_height = 100
 let g:ctrlp_max_files=0
 "autocmd BufWritePost *.pl,*.pm,*.java,*.c,*.py silent! !$ /home/tomh/bin/wrapper-ctags .
+
+set shell=/usr/local/bin/cosh
+set shellcmdflag=-e
+set noshelltemp
