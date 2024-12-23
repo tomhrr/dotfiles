@@ -6,4 +6,25 @@ remove ctrl = Super_L Super_R
 remove ctrl = Alt_L Alt_R
 keycode 9 = Escape asciitilde grave
 add mod1 = Super_L Super_R
+keycode 37 = Mode_switch NoSymbol Mode_switch NoSymbol Mode_switch
 keycode 105 = Mode_switch NoSymbol Mode_switch NoSymbol Mode_switch
+
+keycode 24 = q Q 1 exclam
+keycode 25 = w W 2 at
+keycode 26 = e E 3 numbersign
+keycode 27 = r R 4 dollar
+keycode 28 = t T 5 percent
+keycode 29 = y Y 6 asciicircum
+keycode 30 = u U 7 ampersand
+keycode 31 = i I 8 asterisk
+keycode 32 = o O 9 parenleft
+keycode 33 = p P 0 parenright
+
+keycode 38 = a A sterling EuroSign
+keycode 39 = s S guillemotleft guillemotright
+keycode 40 = d D copyright registered 
+keycode 41 = f F onequarter onehalf
+keycode 42 = g G intersection union
+keycode 43 = h H logicaland logicalor
+keycode 44 = j J leftarrow rightarrow
+keycode 45 = k K uparrow downarrow

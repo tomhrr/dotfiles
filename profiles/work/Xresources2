@@ -1,2 +1,2 @@
-XTerm*font: -*-terminus-medium-r-*-*-20-*-*-*-*-*-iso10646-*
-URxvt*font: xft:Terminus:pixelsize=20;xft:Droid Sans
+XTerm*font: -*-terminus-medium-r-*-*-32-*-*-*-*-*-iso10646-*
+URxvt*font: xft:Terminus:pixelsize=32;xft:Droid Sans

@@ -45,6 +45,7 @@ autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/¹/'/g
 autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/²/'/g
 autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/³/'/g
 autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/Œ/'/g
+autocmd BufNewFile,BufRead /tmp/mutt-* :silent! %s/﻿//g
 
 let g:ctrlp_custom_ignore = 'target'
 
