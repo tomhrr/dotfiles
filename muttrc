@@ -42,9 +42,9 @@ bind generic,index,pager \Cb previous-page
 
 color hdrdefault black        color222
 color header     black        color228 "^Subject:"
-color quoted     red          brightwhite
-color quoted1    blue         brightwhite
-color quoted2    magenta      brightwhite
+color quoted     color21      brightwhite
+color quoted1    color160     brightwhite
+color quoted2    black        brightwhite
 color signature  brightblack  brightwhite
 color indicator  black        color219
 color attachment black        color121

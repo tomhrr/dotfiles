@@ -1,0 +1,18 @@
+set hint-keys=asdfjkl;
+set editor-command=vim
+set default-zoom=125
+set input-css=font: bold 24px Terminus
+set input-error-css=font: bold 24px Terminus
+set status-css=font: bold 24px Terminus
+set completion-css=font: bold 24px Terminus
+set completion-hover-css=font: bold 24px Terminus
+set completion-selected-css=font: bold 24px Terminus
+nnoremap O t
+set tabs-to-links=true
+shortcut-add google=https://www.google.com/search?q=$0
+shortcut-default google
+nnoremap + 1zi
+nnoremap - 1zo
+nnoremap h :sh! xdotool key --window $VIMB_WIN_ID ctrl+o<CR><Esc>
+nnoremap l :sh! xdotool key --window $VIMB_WIN_ID ctrl+i<CR><Esc>
+set header="User-Agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36'"

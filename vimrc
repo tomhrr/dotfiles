@@ -1,7 +1,7 @@
 set nocompatible
 
 map ;; i#!/usr/bin/perluse warnings;use strict;
-map <C-U> :!$ urlview %<CR>
+map <C-U> :!urlview %<CR>
 map <C-T> :NERDTreeToggle<CR>
 map <C-k> :lprevious<CR>
 map <C-l> :lnext<CR>
@@ -54,6 +54,14 @@ let g:syntastic_enable_perl_checker = 1
 let g:syntastic_perl_checkers = ['perl', 'podchecker']
 let g:syntastic_always_populate_loc_list = 1
 
-set shell=/usr/local/bin/cosh
-set shellcmdflag=-e
-set noshelltemp
+highlight mailQuoted1 ctermfg=21
+highlight mailQuoted2 ctermfg=160
+highlight mailQuoted3 ctermfg=black
+highlight mailQuoted4 ctermfg=darkred
+highlight mailQuoted5 ctermfg=darkblue
+
+highlight diffAdded ctermfg=black
+highlight diffAdded ctermbg=255
+highlight diffRemoved ctermfg=darkred
+
+set shell=/usr/bin/bash
