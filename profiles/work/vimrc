@@ -1,11 +1,12 @@
 set nocompatible
 filetype off
 
-set shell=/usr/local/bin/cosh
-set shellcmdflag=-e
-set noshelltemp
+nnoremap ; :
+vnoremap ; :
+nnoremap a A
+vnoremap a A
 
-map ;; i#!/usr/bin/perluse warnings;use strict;
+map <leader>;; i#!/usr/bin/perl^M^Muse warnings;^Muse strict;^M^M^[
 map <C-U> :!$ urlview %<CR>
 map <C-l> :CtrlPTag<CR>
 map <C-d> :CtrlPGrep<CR>
@@ -75,7 +76,3 @@ set tags=./tags,tags;
 let g:ctrlp_max_height = 100
 let g:ctrlp_max_files=0
 "autocmd BufWritePost *.pl,*.pm,*.java,*.c,*.py silent! !$ /home/tomh/bin/wrapper-ctags .
-
-set shell=/usr/local/bin/cosh
-set shellcmdflag=-e
-set noshelltemp

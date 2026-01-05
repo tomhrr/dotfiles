@@ -1,1 +1,1 @@
-COMMAND /usr/bin/qutebrowser %s
+COMMAND /home/tomh/bin/qutebrowser %s

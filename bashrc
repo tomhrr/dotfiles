@@ -91,10 +91,7 @@ if [ -n "$PATH" ]; then
 fi
 
 export EDITOR=vim
-if [[ -v INSIDE_EMACS ]]; then
-    export TERM=screen
-fi
-. "$HOME/.cargo/env"
+if [ -f "$HOME/.cargo/env" ]; then . "$HOME/.cargo/env"; fi
 
 if [ -f "/home/tomh/.bash-kubectl-completion" ]; then
     source /home/tomh/.bash-kubectl-completion

@@ -1,6 +1,11 @@
 set nocompatible
 
-map ;; i#!/usr/bin/perluse warnings;use strict;
+nnoremap ; :
+vnoremap ; :
+nnoremap a A
+vnoremap a A
+
+map <leader>;; i#!/usr/bin/perluse warnings;use strict;
 map <C-U> :!urlview %<CR>
 map <C-T> :NERDTreeToggle<CR>
 map <C-k> :lprevious<CR>

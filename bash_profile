@@ -44,7 +44,9 @@ if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
 
-. "$HOME/.cargo/env"
+if [ -f "$HOME/.cargo/env" ]; then
+    . "$HOME/.cargo/env"
+fi
 
 GNUPGHOME=/home/tomh/.gnupg
 export PATH="$HOME/.cargo/bin:$PATH"
