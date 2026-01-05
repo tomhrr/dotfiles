@@ -22,7 +22,7 @@ kb-files var; kb-files !;
         "keyboard not found" error;
     then;
     "setxkbmap -layout us" exec2;
-    "xset r rate 250 50" exec2;
+    "xset r rate 200 50" exec2;
     HOME getenv; "xmodmap {}/dotfiles/Xmodmap-common" fmt; exec2;
     clone; [HOME getenv; "xmodmap {}/{}" fmt; exec2] for;
     ,,

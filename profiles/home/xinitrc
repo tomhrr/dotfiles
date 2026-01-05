@@ -1,7 +1,7 @@
 #!/bin/sh
 setxkbmap -option
 xmodmap $HOME/.Xmodmap
-xset r rate 250 50
+xset r rate 200 50
 xset b off
 xrdb -load $HOME/.Xresources
 urxvtd &
