@@ -7,5 +7,6 @@
 	default = matching
 [init]
 	templatedir = ~/.git
+	defaultBranch = main
 [safe]
 	directory = /home/tomh/work/cosh
